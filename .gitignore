@@ -1,0 +1,25 @@
+cat <<EOF > .gitignore
+
+# Data and models
+data/
+models/
+*.csv
+*.csv.gz
+*.parquet
+*.joblib
+*.pkl
+
+# Spark, Hadoop y Metadata
+spark-warehouse/
+derby.log
+metastore_db/
+checkpoint/
+*.crc
+_SUCCESS
+
+# Python y Jupyter
+__pycache__/
+.ipynb_checkpoints/
+.env
+.DS_Store
+EOF
