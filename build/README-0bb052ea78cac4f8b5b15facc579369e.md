@@ -10,11 +10,11 @@
 
 # Project Overview
 
-This project implements a supervised machine learning pipeline to predict loan defaults using the Lending Club dataset (containing over 2 million records). The core objective is to benchmark the performance and computational efficiency of **Scikit-Learn** (local processing) against **PySpark** (distributed processing). 
+This research focuses on a technical benchmark between local and distributed computing architectures for financial risk modeling. Utilizing the Lending Club dataset—comprising over 1 million records—the project evaluates the scalability, memory management, and execution latency of Scikit-Learn (single-node processing) against Apache PySpark (distributed cluster processing).
 
-Furthermore, the project integrates **LIME** (Local Interpretable Model-agnostic Explanations) to provide transparency for individual risk predictions, ensuring the models are not just accurate but explainable in a financial context.
+Rather than focusing solely on predictive accuracy, this analysis explores the computational trade-offs required to handle large-scale data in a production-grade environment. To ensure these models meet the transparency standards required in the fintech industry, we integrate **LIME** (Local Interpretable Model-agnostic Explanations), providing a framework for auditable and explainable risk predictions across both platforms.
 
-Both authors contributed equally to the research, data engineering, and model development phases of this project.
+All three authors contributed equally to the research design, data engineering, benchmarking methodology, and model development phases of this project.
 
 ## Data Source
 
@@ -27,19 +27,20 @@ To ensure modularity and reproducibility, the project follows this structure. Cu
 
 ```text
 lending-risk-pyspark/
-├── data/               # Raw and processed datasets (Git ignored)
-├── notebooks/          # Modular Experimentation & Reports
-│   ├── 01_eda_limpieza.ipynb
-│   ├── 02_sklearn_model.ipynb
-│   ├── 03_pyspark_model.ipynb
-│   └── 04_interpretacion_lime.ipynb
-├── src/                # Modular source code (Manual functions)
+├── data/
+│   ├── accepted_2007_to_2018Q4.csv.gz
+│   └── lending_club_fase1_curated.parquet
+├── notebooks/
+│   └── lending_risk_pyspark.ipynb
+├── src/
+│   ├── cv_optimizers.py
+│   ├── plots.py
 │   ├── preprocessing.py
-│   └── evaluation.py
-├── models/             # Serialized model artifacts
-├── .gitignore          # Environment & Data exclusion rules
-├── README.md           # Project documentation
-└── environment.yml     # Conda environment configuration
+│   ├── risk_analytics_utils.py
+│   └── scoring_engine_tools.py
+├── .gitignore
+├── README.md
+└── environment.yml
 ```
 
 ## Objectives
