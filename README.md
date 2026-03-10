@@ -2,6 +2,7 @@
 **A Comparative Analysis on Financial Risk & Model Interpretability**
 
 **Authors:**
+* **Paula Andrea Gómez Vargas** (apaulag@uninorte.edu.co)
 * **Juan Camilo Mendoza Arango** (jcamilo01mendoza@gmail.com)
 * **Miguel Ángel Pérez Vargas** (miguelangelpv0920@gmail.com)
 
