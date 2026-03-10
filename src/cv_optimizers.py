@@ -193,7 +193,8 @@ def manual_grid_search_pyspark(
                     weightCol="weight_col",
                     numTrees=n_est, 
                     maxDepth=depth,
-                    maxBins=64,
+                    maxBins=32,
+                    minInstancesPerNode=10, 
                     seed=42
                 )
                 model = rf_spark.fit(train_weighted)
