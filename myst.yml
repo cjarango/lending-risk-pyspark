@@ -4,8 +4,7 @@ project:
   title: Lending Risk Analysis
   id: lending-risk
 
-  files:
-    - notebooks/lending-risk-pyspark.ipynb
-
 site:
   template: book-theme
+  options:
+    codeFold: true
